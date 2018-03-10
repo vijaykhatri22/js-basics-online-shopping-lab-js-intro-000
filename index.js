@@ -24,10 +24,8 @@ function viewCart() {
     for(var i=0;i<cart.length;i++){
       temp.push(`${cart[i].itemName} at \$${cart[i].itemPrice}`);
     }
-    return `In your cart, you have ${temp.join( 'and' )}.`;
-
+  
   }
-
 }
 
 function total() {
