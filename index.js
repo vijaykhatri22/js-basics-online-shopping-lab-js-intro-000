@@ -20,11 +20,11 @@ function viewCart() {
     return "Your shopping cart is empty."
   }
   else{
-    var temp =[];
+    	var temp=[];
     for(var i=0;i<cart.length;i++){
       temp.push(`${cart[i].itemName} at \$${cart[i].itemPrice}`);
     }
-  
+  	return `In your cart, you have ${temp.slice(0,cart.length - 1).join()} and ${temp.slice(cart.length-1)}.`; 
   }
 }
 
