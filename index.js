@@ -24,7 +24,13 @@ function viewCart() {
     for(var i=0;i<cart.length;i++){
       temp.push(`${cart[i].itemName} at \$${cart[i].itemPrice}`);
     }
-  	return `In your cart, you have ${temp.slice(0,cart.length - 1).join()} and ${temp.slice(cart.length-1)}.`;
+    if(cart.length==1){
+      return `In your cart, you have ${temp[0]}.`;
+      
+    }
+    else {
+      return `In your cart, you have ${temp.slice(0,cart.length - 1).join(', ')} and ${temp.slice(cart.length-1)}.`;
+  }
   }
 }
 
