@@ -26,7 +26,7 @@ function viewCart() {
     }
     if(cart.length==1){
       return `In your cart, you have ${temp[0]}.`;
-      
+
     }
     else {
       return `In your cart, you have ${temp.slice(0,cart.length - 1).join(', ')} and ${temp.slice(cart.length-1)}.`;
